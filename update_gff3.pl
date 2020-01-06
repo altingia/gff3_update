@@ -41,12 +41,12 @@ while(<OLD>){
         my ($chr,$len,$anchor,$orient)=split/_/,$agp{$items[0]};
         my ($start,$end);
             if($orient eq "+"){
-                $start=$items[3]+$anchor-1;
-                $end=$items[4]+$anchor-1;
+                $start=$items[3]+$anchor;
+                $end=$items[4]+$anchor;
             }
             else{
-                $start=$anchor-1+$len-$items[3];
-                $end=$anchor-1+$len-$items[4];
+                $start=$anchor+$len-$items[3];
+                $end=$anchor+$len-$items[4];
             }
             print OUT "$chr\t$items[1]\t$items[2]\t$start\t$end\t$items[5]\t$items[6]\t$items[7]\t$items[8]\n";
      }
