@@ -45,8 +45,8 @@ while(<OLD>){
                 $end=$items[4]+$anchor;
             }
             else{
-                $start=$anchor+$len-$items[3];
-                $end=$anchor+$len-$items[4];
+                $start=$anchor+$len-$items[3]+1;
+                $end=$anchor+$len-$items[4]+1;
             }
             print OUT "$chr\t$items[1]\t$items[2]\t$start\t$end\t$items[5]\t$items[6]\t$items[7]\t$items[8]\n";
      }
