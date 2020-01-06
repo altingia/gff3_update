@@ -19,7 +19,7 @@ while(<AGP>){
     my @items=split/\t/,$_;
     my $chr=$items[0];
     my $len=$items[7];
-    my $anchor=$items[1];
+    my $anchor=$items[1]-1;
     my $orient=$items[8];
     my $record=join "_",($chr,$len,$anchor,$orient);
        $agp{$items[5]}=$record;
